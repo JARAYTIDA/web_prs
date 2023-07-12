@@ -40,7 +40,7 @@ const Navbar = () => {
                     <div className='mx-3 hover:text-blue-700 hover:text-4xl duration-500'>
                         <Link to = "https://www.linkedin.com/"> <AiFillLinkedin  /> </Link>
                     </div>
-                    <div className='bg-yellow-600 rounded-lg mx-3'>
+                    {/* <div className='bg-yellow-600 rounded-lg mx-3'>
                         <button className='mx-3 my-1'>
                             <Link to="/login">Login</Link>
                         </button>
@@ -49,7 +49,7 @@ const Navbar = () => {
                         <button className='mx-3 my-1'>
                             <Link to="/register">Register</Link>
                         </button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             
