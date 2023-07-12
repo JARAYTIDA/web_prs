@@ -1,17 +1,14 @@
 import React from 'react'
 import {Link, useSearchParams} from 'react-router-dom'
-import { useSelector } from 'react-redux'
 
 import eq from '../images/Equity_1.jpg'
 import com from '../images/Commidity.jpg'
 import mut from '../images/Mutual.jpg'
-import { BlogBox_1 } from '../components'
+import { Posts } from '../components'
+
 
 
 const Services = () => {
-
-  const posts = useSelector((state) => state.posts);
-  console.log(posts);
 
   return (
     <div className='bg-gray-800 flex flex-col justify-between w-full h-full'>
@@ -22,14 +19,17 @@ const Services = () => {
         </h1>
 
         <hr className='mt-11 mb-11 ' />
-        <div className='justify-between'>
+
+        <Posts/>
+
+        {/* <div className='justify-between'>
           <div className='flex flex-wrap w-screen gap-[30px]'>
             <BlogBox_1 />
             <BlogBox_1 />
             <BlogBox_1 />
             <BlogBox_1 />
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="flex flex-col items-center  bg-gray-800">
