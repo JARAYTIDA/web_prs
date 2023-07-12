@@ -1,10 +1,19 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {Route, Routes} from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 
 import {Navbar, Footer} from './components'
-import {Home, Equity, Commodity, Debt, ContactUs, AboutUs, PrivacyPolicy, Register, Login} from './pages'
+import {Home, Equity, Commodity, Debt, ContactUs, AboutUs, PrivacyPolicy, Register, Login} from './pages';
+import { getPost } from './actions/posts';
 
 const App = () => {
+
+    const dispatch = useDispatch();
+
+    useEffect(()=>{
+        dispatch(getPost());
+    }, [dispatch])
+
     return (
         <div>
             <Navbar/>

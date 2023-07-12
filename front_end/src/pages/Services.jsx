@@ -1,5 +1,6 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useSearchParams} from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 import eq from '../images/Equity_1.jpg'
 import com from '../images/Commidity.jpg'
@@ -8,6 +9,10 @@ import { BlogBox_1 } from '../components'
 
 
 const Services = () => {
+
+  const posts = useSelector((state) => state.posts);
+  console.log(posts);
+
   return (
     <div className='bg-gray-800 flex flex-col justify-between w-full h-full'>
 
