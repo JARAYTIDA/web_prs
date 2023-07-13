@@ -20,7 +20,10 @@ const Services = () => {
 
         <hr className='mt-11 mb-11 ' />
 
-        <Posts/>
+        <div className='mr-20 ml-20 mb-20 flex flex-col items-center'>
+          <Posts/>
+        </div>
+
 
         {/* <div className='justify-between'>
           <div className='flex flex-wrap w-screen gap-[30px]'>

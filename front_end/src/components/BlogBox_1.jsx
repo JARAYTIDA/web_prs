@@ -3,10 +3,11 @@ import logo from '../images/Mutual.jpg'
 import { Link } from 'react-router-dom'
 
 const BlogBox_1 = ({post}) => {
+    const htmlContent = post.message;
     return (
         <Link to = '/blog-details'>
 
-            <div className='xs:w-[238px] sm:w-[288px] md:w-[350px] w-full rounded-[15px] bg-white cursor-pointer hover:bg-black hover:text-white'
+            <div className='w-[350px] rounded-[15px] bg-white cursor-pointer hover:bg-black hover:text-white'
                 //  onClick={handleClick}
                 >
                 <img src={post.selectedFile} alt="fund" className='w-full h-[158px] object-cover rounded-[15px]' />
@@ -17,7 +18,7 @@ const BlogBox_1 = ({post}) => {
                     </div> */}
                     <div className='block'>
                         <h3 className='font-epilogue font-semibold text-[16px] text-left leading-[26px] line-clamp-3'>{post.title}</h3>
-                        <p className='text-[#808191] mt-[5px] font-epilogue font-normal text-left leading-[18px] line-clamp-4'>{post.message}</p>
+                        <p className='text-[#808191] mt-[5px] font-epilogue font-normal text-left leading-[18px] line-clamp-4' dangerouslySetInnerHTML={{ __html: htmlContent }}></p>
                     </div>
                     {/* <div className='flex justify-between flex-wrap mt-[15px] gap-2'>
                         <div className='flex flex-col'>

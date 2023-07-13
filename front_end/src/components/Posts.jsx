@@ -20,7 +20,7 @@ const Posts = () => {
         (len === 0) ? <CircularProgress /> : (
             <Grid container alignItems='stretch' spacing={3} className='flex flex-wrap'>
                 {posts.data.map((post) => (
-                    <Grid key = {post._id} item xs={12} sm={6} md={4} lg={3}>
+                    <Grid key = {post._id} item >
                         <BlogBox_1 post = {post} className='xs:mx-3'/>
                     </Grid>
                 ))}
