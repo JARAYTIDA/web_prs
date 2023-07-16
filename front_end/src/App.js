@@ -4,14 +4,14 @@ import { useDispatch } from 'react-redux'
 
 import {Navbar, Footer, Form} from './components'
 import {Home, Equity, Commodity, Debt, ContactUs, AboutUs, PrivacyPolicy, Register, Login, BlogDetails} from './pages';
-import { getPost } from './actions/posts';
+import { getPosts } from './actions/posts';
 
 const App = () => {
 
     const dispatch = useDispatch();
 
     useEffect(()=>{
-        dispatch(getPost());
+        dispatch(getPosts());
     }, [dispatch])
 
     return (
@@ -29,7 +29,7 @@ const App = () => {
                 <Route path = "/login" element = {<Login/>} /> */}
 
                 <Route path = "/form" element = {<Form/>} />
-                <Route path = "/blog-details" element = {<BlogDetails/>} />
+                <Route path = "/blog-details/:_id" element = {<BlogDetails/>} />
             </Routes>
             <Footer/>
         </div>

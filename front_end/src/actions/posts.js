@@ -1,10 +1,23 @@
 import * as api from '../api';
 
 // action creators 
-export const getPost = () => async(dispatch) => {
+export const getPost = (id) => async(dispatch) => {
 
     try {
-        const data = await api.fetchPost(); 
+        const data = await api.fetchPost(id); 
+        
+        dispatch({ type:'FETCH_POST', payload: data});
+
+    } catch (error) {
+        console.log(error.message);
+    }
+
+}
+
+export const getPosts = () => async(dispatch) => {
+
+    try {
+        const data = await api.fetchPosts(); 
         
         dispatch({ type:'FETCH_ALL', payload: data});
 

@@ -5,33 +5,132 @@ import { Link } from 'react-router-dom'
 const BlogBox_1 = ({post}) => {
     const htmlContent = post.message;
     return (
-        <Link to = '/blog-details'>
+        <Link to = {`/blog-details/${post?._id}`} className='justify-between'>
+            <div className='justify-between '>
 
+            <div>
+<aside aria-label="Related articles" class="py-8 lg:py-24 bg-gray-50 dark:bg-gray-800">
+                    <div class="px-4 mx-auto max-w-screen-xl">
+                        <h2 class="mb-8 text-2xl font-bold text-gray-900 dark:text-white">Related articles</h2>
+                        <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+                            <article class="max-w-xs">
+                                <a href="#">
+                                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-1.png" class="mb-5 rounded-lg" alt="Image 1" />
+                                </a>
+                                <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                                    <a href="#">Our first office</a>
+                                </h2>
+                                <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation.</p>
+                                <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                                    Read in 2 minutes
+                                </a>
+                            </article>
+                            <article class="max-w-xs">
+                                <a href="#">
+                                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-2.png" class="mb-5 rounded-lg" alt="Image 2" />
+                                </a>
+                                <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                                    <a href="#">Enterprise design tips</a>
+                                </h2>
+                                <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation.</p>
+                                <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                                    Read in 12 minutes
+                                </a>
+                            </article>
+                            <article class="max-w-xs">
+                                <a href="#">
+                                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-3.png" class="mb-5 rounded-lg" alt="Image 3" />
+                                </a>
+                                <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                                    <a href="#">We partnered with Google</a>
+                                </h2>
+                                <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation.</p>
+                                <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                                    Read in 8 minutes
+                                </a>
+                            </article>
+                            <article class="max-w-xs">
+                                <a href="#">
+                                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-4.png" class="mb-5 rounded-lg" alt="Image 4" />
+                                </a>
+                                <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                                    <a href="#">Our first project with React</a>
+                                </h2>
+                                <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation.</p>
+                                <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                                    Read in 4 minutes
+                                </a>
+                            </article>
+                            <article class="max-w-xs">
+                                <a href="#">
+                                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-4.png" class="mb-5 rounded-lg" alt="Image 4" />
+                                </a>
+                                <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                                    <a href="#">Our first project with React</a>
+                                </h2>
+                                <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation.</p>
+                                <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                                    Read in 4 minutes
+                                </a>
+                            </article>
+                            <article class="max-w-xs">
+                                <a href="#">
+                                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-4.png" class="mb-5 rounded-lg" alt="Image 4" />
+                                </a>
+                                <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                                    <a href="#">Our first project with React</a>
+                                </h2>
+                                <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation.</p>
+                                <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                                    Read in 4 minutes
+                                </a>
+                            </article>
+                            <article class="max-w-xs">
+                                <a href="#">
+                                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-4.png" class="mb-5 rounded-lg" alt="Image 4" />
+                                </a>
+                                <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                                    <a href="#">Our first project with React</a>
+                                </h2>
+                                <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation.</p>
+                                <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                                    Read in 4 minutes
+                                </a>
+                            </article>
+                            <article class="max-w-xs">
+                                <a href="#">
+                                    <img src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/article/blog-4.png" class="mb-5 rounded-lg" alt="Image 4" />
+                                </a>
+                                <h2 class="mb-2 text-xl font-bold leading-tight text-gray-900 dark:text-white">
+                                    <a href="#">Our first project with React</a>
+                                </h2>
+                                <p class="mb-4 font-light text-gray-500 dark:text-gray-400">Over the past year, Volosoft has undergone many changes! After months of preparation.</p>
+                                <a href="#" class="inline-flex items-center font-medium underline underline-offset-4 text-primary-600 dark:text-primary-500 hover:no-underline">
+                                    Read in 4 minutes
+                                </a>
+                            </article>
+                            
+                        </div>
+                    </div>
+                </aside>
+                
+            </div>
+            </div>
+
+                
+
+{/* 
             <div className='w-[350px] rounded-[15px] bg-white cursor-pointer hover:bg-black hover:text-white'
-                //  onClick={handleClick}
+
                 >
                 <img src={post.selectedFile} alt="fund" className='w-full h-[158px] object-cover rounded-[15px]' />
                 <div className='flex flex-col p-4'>
-                    {/* <div>
-                        <img src={tagType} alt="tag" className='w-[17px] h-[17px] object-contain' />
-                        <p className='ml-[12px] mt-[2px] font-epilogue font-medium text-[12px] text-[#808191]'>Category</p>
-                    </div> */}
+
                     <div className='block'>
                         <h3 className='font-epilogue font-semibold text-[16px] text-left leading-[26px] line-clamp-3'>{post.title}</h3>
                         <p className='text-[#808191] mt-[5px] font-epilogue font-normal text-left leading-[18px] line-clamp-4' dangerouslySetInnerHTML={{ __html: htmlContent }}></p>
                     </div>
-                    {/* <div className='flex justify-between flex-wrap mt-[15px] gap-2'>
-                        <div className='flex flex-col'>
-                            <h4 className='font-epilogue font-semibold text-[14px] text-[#b2b3bd] leading-[22px]'>{amountCollected}</h4>
-                            <p className='mt-[3px] font-epilogue font-normal text-[12px] leading-[18px] text-[#808191] sm:max-w-[120px] truncate'>Raised of {target}</p>
-                        </div>
 
-                        <div className='flex flex-col'>
-                            <h4 className='font-epilogue font-semibold text-[14px] text-[#b2b3bd] leading-[22px]'>{remainingDays}</h4>
-                            <p className='mt-[3px] font-epilogue font-normal text-[12px] leading-[18px] text-[#808191] sm:max-w-[120px] truncate'>Days Left</p>
-                        </div>
-
-                    </div> */}
 
                     <div className='flex items-center mt-[20px] gap-[12px]'>
                         <div className='w-[30px] h-[30px] rounded-full flex justify-center items-center bg-[#13131a]'>
@@ -40,16 +139,10 @@ const BlogBox_1 = ({post}) => {
                         <p className='flex-1 font-epilogue font-normal text-[12px] text-[#808191] truncate'>by <span className='text-[#b2b3bd]'>{post.creator}</span></p>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </Link>
 
-        // <div className='relative mr-3 ml-3 mb-11' style={{width:"370px", height:"220px"}} >
-        //     <img src={logo} alt="News Image" class="object-cover" style={{width:"370px", height:"220px"}} />
-            
-        //     <div class="absolute inset-0 flex justify-center">
-        //         <h2 class="text-white text-2xl font-bold text-center">Your News Headline</h2>
-        //     </div>
-        // </div>
+
     )
 }
 

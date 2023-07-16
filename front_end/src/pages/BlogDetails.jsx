@@ -1,17 +1,30 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom'
+
+import { getPost } from '../actions/posts';
 
 const BlogDetails = () => {
+    const { id } = useParams();
+    const {post} = useSelector((state) => state.posts);
+    const dispatch = useDispatch();
+    const htmlContent = '';
+
+    useEffect(() => {
+        dispatch(getPost(id));
+    }, [id]);
+
+    console.log(post);
+
     return ( 
         <>
             <main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900">
                 <div class=" mt-20 flex justify-between px-4 mx-auto max-w-screen-xl ">
                     <article class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
                         <header class="mb-4 lg:mb-6 not-format">
-                            <h1 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">Best practices for successful prototypes</h1>
+                            <h1 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white"></h1>
                         </header>
-                        <p className='text-white'>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa harum libero velit nesciunt necessitatibus aperiam quasi illum pariatur debitis esse tempore fuga, doloribus fugiat earum fugit? Odio fuga delectus doloremque aliquid deleniti officia dolores? Ullam beatae voluptate odit amet, alias, debitis officiis ipsa facere unde esse recusandae, iure accusamus inventore. Ut ipsum molestias praesentium eius cumque nostrum numquam consectetur, quia eveniet enim nobis, quidem aliquam iste debitis! Consequatur aliquam cupiditate doloremque dicta accusantium doloribus fuga provident iusto blanditiis rerum aut earum velit veritatis, architecto at autem sed suscipit! Molestiae sequi dolore vitae quibusdam aut earum explicabo minima nobis officia quidem!
-                        </p>
+                        <p className='text-white' dangerouslySetInnerHTML={{ __html: htmlContent }}></p>
                     </article>
                 </div>
                 </main>
